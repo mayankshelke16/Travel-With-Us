@@ -2,439 +2,153 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Travel With Us | Explore Maharashtra</title>
 
-    <title>Travel With Us - Unoficial Website</title>
+    <meta name="description"
+        content="Travel With Us - Discover beautiful destinations and plan your next adventure.">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-
-    <!-- =================================
-         NAVIGATION
-    ================================== -->
-
+    <!-- NAVIGATION -->
     <header>
-
         <nav class="navbar">
+            <div class="logo">🌍 Travel With Us</div>
 
-            <div class="logo">
-                🌿 Travel With Us
-            </div>
-
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#trip">Trip Details</a>
-                </li>
-
-                <li>
-                    <a href="#about">About Us</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#plan">Plan Your Trip</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
         </nav>
-
     </header>
 
-
-
-    <!-- =================================
-         HERO SECTION
-    ================================== -->
-
-    <section id="home" class="hero">
-
+    <!-- HERO -->
+    <section class="hero" id="home">
         <div class="hero-content">
 
-            <p class="small-title">
-                MAHARASHTRA TRAVEL
-            </p>
+            <p class="tagline">EXPLORE • DISCOVER • EXPERIENCE</p>
 
-
-            <h1 id="heroLocation">
-                Explore the Maharashtra
-            </h1>
-
+            <h1>Your Journey<br>Begins Here!</h1>
 
             <p>
-                Discover beautiful places in Maharashtra
-                with Travel With Us.
+                Discover amazing destinations, create beautiful memories
+                and explore the world with Travel With Us.
             </p>
 
-
-            <a href="#trip" class="hero-button">
-                View Trip Details
-            </a>
+            <a href="#plan" class="main-button">Plan Your Trip</a>
 
         </div>
-
     </section>
 
+    <!-- ABOUT -->
+    <section class="about" id="about">
 
+        <p class="section-label">WHO WE ARE</p>
 
-    <!-- =================================
-         TRIP DETAILS
-    ================================== -->
+        <h2>Welcome to Travel With Us</h2>
 
-    <section id="trip" class="trip">
+        <p class="about-text">
+            We believe every journey tells a story.
+            Whether you love mountains, beaches, nature or adventure,
+            we help you plan your next memorable trip.
+        </p>
 
-        <div class="section-title">
+        <div class="features">
 
-            <p class="section-label">
-                UPCOMING TRIP
-            </p>
-
-
-            <h2>
-                Trip Details
-            </h2>
-
-        </div>
-
-
-
-        <div class="trip-card">
-
-
-            <!-- LOCATION -->
-
-            <div class="trip-image">
-
-                (Trips not available)
-
+            <div class="feature-card">
+                <span>🏔️</span>
+                <h3>Beautiful Places</h3>
+                <p>Discover amazing destinations.</p>
             </div>
 
+            <div class="feature-card">
+                <span>📸</span>
+                <h3>Beautiful Memories</h3>
+                <p>Make every journey unforgettable.</p>
+            </div>
 
-
-            <div class="trip-content">
-
-                <h2 id="locationName">
-                    No trips
-                </h2>
-
-
-                <p id="locationDescription">
-
-                    No trips              
-
-                </p>
-
-
-
-                <!-- DETAILS -->
-
-                <div class="trip-details">
-
-
-                    <div class="detail">
-
-                        <span>
-                            📍
-                        </span>
-
-                        <div>
-
-                            <strong>
-                                Location
-                            </strong>
-
-                            <p id="location">
-                                No trips
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="detail">
-
-                        <span>
-                            📅
-                        </span>
-
-                        <div>
-
-                            <strong>
-                                Departure Date
-                            </strong>
-
-                            <p id="departureDate">
-                                No trips
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="detail">
-
-                        <span>
-                            🔙
-                        </span>
-
-                        <div>
-
-                            <strong>
-                                Return Date
-                            </strong>
-
-                            <p id="returnDate">
-                                No trips
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="detail">
-
-                        <span>
-                            📞
-                        </span>
-
-                        <div>
-
-                            <strong>
-                                Contact
-                            </strong>
-
-                            <p>
-                                <span id="phone1">
-                                    9834931456
-                                </span>
-
-                                <br>
-
-                                <span id="phone2">
-                                    7841969934
-                                </span>
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- ENQUIRY BUTTON -->
-
-                <button
-                    type="button"
-                    class="enquiry-button"
-                    onclick="sendEnquiry()">
-
-                    📱 Send Enquiry
-
-                </button>
-
+            <div class="feature-card">
+                <span>❤️</span>
+                <h3>Great Experiences</h3>
+                <p>Enjoy every moment of travelling.</p>
             </div>
 
         </div>
 
     </section>
 
+    <!-- PLAN YOUR TRIP -->
+    <section class="plan" id="plan">
 
+        <div class="plan-card">
 
-    <!-- =================================
-         ABOUT US
-    ================================== -->
+            <p class="section-label">LET'S TRAVEL</p>
 
-    <section id="about" class="about">
-
-        <div class="about-content">
-
-
-            <p class="section-label">
-                ABOUT US
-            </p>
-
-
-            <h2>
-                Travel With Us
-            </h2>
-
+            <h2>Where Do You Want To Go?</h2>
 
             <p>
-
-                We help travellers discover beautiful
-                destinations across Maharashtra.
-                Our goal is to make your journey
-                comfortable, enjoyable and memorable.
-
+                Tell us your dream destination.
+                We'll be happy to hear from you!
             </p>
 
+            <label for="destination">Your Destination</label>
 
+            <input
+                type="text"
+                id="destination"
+                placeholder="Example: Goa, Manali, Kashmir..."
+            >
 
-            <div class="features">
+            <label for="message">Your Travel Message (Optional)</label>
 
+            <textarea
+                id="message"
+                rows="4"
+                placeholder="Tell us about your travel plans..."
+            ></textarea>
 
-                <div class="feature">
-
-                    <span>
-                        🌿
-                    </span>
-
-                    <h3>
-                        Nature
-                    </h3>
-
-                    <p>
-                        Experience the beauty
-                        of Maharashtra.
-                    </p>
-
-                </div>
-
-
-
-                <div class="feature">
-
-                    <span>
-                        📸
-                    </span>
-
-                    <h3>
-                        Memories
-                    </h3>
-
-                    <p>
-                        Capture beautiful moments
-                        during your journey.
-                    </p>
-
-                </div>
-
-
-
-                <div class="feature">
-
-                    <span>
-                        ❤️
-                    </span>
-
-                    <h3>
-                        Great Experience
-                    </h3>
-
-                    <p>
-                        Enjoy a memorable journey
-                        with Travel With Us.
-                    </p>
-
-                </div>
-
-            </div>
+            <button onclick="sendEmail()" class="email-button">
+                ✉️ Send Email
+            </button>
 
         </div>
 
     </section>
 
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
 
+        <p class="section-label">GET IN TOUCH</p>
 
-    <!-- =================================
-         CONTACT
-    ================================== -->
+        <h2>Contact Travel With Us</h2>
 
-    <section id="contact" class="contact">
+        <p>Have a destination in mind? Send us an email!</p>
 
-        <div class="contact-box">
+        <p class="email-address">
+            📧 shital.shelke2026@gmail.com
+        </p>
 
-
-            <p class="section-label">
-                CONTACT US
-            </p>
-
-
-            <h2>
-                Travel With Us
-            </h2>
-
-
-            <p>
-                For trip enquiries, contact us on:
-            </p>
-
-
-            <div class="contact-numbers">
-
-                <p>
-                    📞 <strong id="contactPhone1">
-                        9834931456
-                    </strong>
-                </p>
-
-
-                <p>
-                    📞 <strong id="contactPhone2">
-                        7841969934
-                    </strong>
-                </p>
-
-            </div>
+        <button onclick="sendEmail()" class="contact-button">
+            Contact Us
+        </button>
 
     </section>
 
-
-
-    <!-- =================================
-         FOOTER
-    ================================== -->
-
+    <!-- FOOTER -->
     <footer>
-
-        <p>
-            © 2026 Travel With Us
-        </p>
-
-
-        <p id="footerTrip">
-            Made by-Swati & Shital
-        </p>
-
-
-        <p>
-
-            📞 9834931456
-            &nbsp; | &nbsp;
-            📞 7841969934
-
-        </p>
-
+        <h3>🌍 Travel With Us</h3>
+        <p>Explore More. Travel More. Live More.</p>
+        <p>© 2026 Travel With Us. All Rights Reserved.</p>
     </footer>
-
-
-
-    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
 </body>
-
 </html>

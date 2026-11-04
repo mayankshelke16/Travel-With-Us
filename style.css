@@ -1,840 +1,310 @@
-/* ==========================================
-   TRAVEL WITH US
-   MAHARASHTRA TRAVEL WEBSITE
-========================================== */
-
-
-/* ==========================================
-   GENERAL
-========================================== */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    line-height: 1.6;
-
+    font-family: Arial, sans-serif;
     color: #222;
-
     background: #f5faf6;
-
+    line-height: 1.6;
 }
 
-
-/* ==========================================
-   NAVIGATION
-========================================== */
+/* NAVIGATION */
 
 .navbar {
-
     background: #174d32;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
-    padding: 18px 7%;
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
-
+    padding: 20px 7%;
 }
-
 
 .logo {
-
     color: white;
-
     font-size: 25px;
-
     font-weight: bold;
-
 }
 
-
-.nav-links {
-
+.navbar ul {
     display: flex;
-
     list-style: none;
-
     gap: 30px;
-
 }
 
-
-.nav-links a {
-
-    color: white;
-
+.navbar a {
     text-decoration: none;
-
+    color: white;
     font-weight: bold;
-
-    transition: 0.3s;
-
 }
 
-
-.nav-links a:hover {
-
+.navbar a:hover {
     color: #ffd166;
-
 }
 
-
-/* ==========================================
-   HERO
-========================================== */
+/* HERO */
 
 .hero {
-
     min-height: 600px;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     text-align: center;
-
     color: white;
-
-    padding: 50px 20px;
-
+    padding: 40px 20px;
 
     background:
-
-        linear-gradient(
-            rgba(0, 0, 0, 0.45),
-            rgba(0, 0, 0, 0.45)
-        ),
-
-        linear-gradient(
-            135deg,
-            #2e7d32,
-            #66bb6a,
-            #81c784
-        );
-
+        linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        linear-gradient(135deg, #174d32, #66bb6a, #81c784);
 }
-
 
 .hero-content {
-
     max-width: 850px;
-
 }
 
-
-.small-title {
-
+.tagline {
     letter-spacing: 4px;
-
-    font-size: 14px;
-
     font-weight: bold;
-
-    margin-bottom: 15px;
-
+    margin-bottom: 20px;
 }
-
 
 .hero h1 {
-
-    font-size: 60px;
-
+    font-size: 65px;
+    line-height: 1.2;
     margin-bottom: 20px;
-
-    text-shadow:
-        3px 3px 8px #222;
-
 }
 
-
-.hero p {
-
-    font-size: 21px;
-
+.hero-content > p:not(.tagline) {
+    font-size: 20px;
     margin-bottom: 35px;
-
 }
 
-
-.hero-button {
-
+.main-button {
     display: inline-block;
-
+    padding: 14px 35px;
     background: #ffd166;
-
     color: #222;
-
-    padding: 15px 35px;
-
-    border-radius: 30px;
-
     text-decoration: none;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-
-}
-
-
-.hero-button:hover {
-
-    background: white;
-
-    transform: translateY(-4px);
-
-}
-
-
-/* ==========================================
-   SECTION TITLE
-========================================== */
-
-.section-title {
-
-    text-align: center;
-
-    margin-bottom: 45px;
-
-}
-
-
-.section-label {
-
-    color: #2e7d32;
-
-    font-size: 14px;
-
-    letter-spacing: 3px;
-
-    font-weight: bold;
-
-    margin-bottom: 8px;
-
-}
-
-
-.section-title h2 {
-
-    color: #174d32;
-
-    font-size: 40px;
-
-}
-
-
-/* ==========================================
-   TRIP SECTION
-========================================== */
-
-.trip {
-
-    padding: 80px 7%;
-
-    background: white;
-
-}
-
-
-.trip-card {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1.5fr;
-
-    background: #f7faf7;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0, 0, 0, 0.12);
-
-}
-
-
-/* ==========================================
-   TRIP IMAGE
-========================================== */
-
-.trip-image {
-
-    min-height: 450px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 140px;
-
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #43a047,
-            #a5d6a7
-        );
-
-}
-
-
-/* ==========================================
-   TRIP CONTENT
-========================================== */
-
-.trip-content {
-
-    padding: 45px;
-
-}
-
-
-.trip-content h2 {
-
-    color: #174d32;
-
-    font-size: 40px;
-
-    margin-bottom: 15px;
-
-}
-
-
-.trip-content > p {
-
-    color: #555;
-
-    margin-bottom: 30px;
-
-}
-
-
-/* ==========================================
-   TRIP DETAILS
-========================================== */
-
-.trip-details {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 15px;
-
-    margin-bottom: 30px;
-
-}
-
-
-.detail {
-
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 12px;
-
-    background: white;
-
-    padding: 18px;
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 3px 10px
-        rgba(0, 0, 0, 0.07);
-
-}
-
-
-.detail > span {
-
-    font-size: 28px;
-
-}
-
-
-.detail strong {
-
-    color: #174d32;
-
-}
-
-
-.detail p {
-
-    color: #666;
-
-    font-size: 14px;
-
-}
-
-
-/* ==========================================
-   ENQUIRY BUTTON
-========================================== */
-
-.enquiry-button {
-
-    border: none;
-
-    background: #174d32;
-
-    color: white;
-
-    padding: 15px 30px;
-
     border-radius: 30px;
-
-    font-size: 17px;
-
     font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-
+    transition: .3s;
 }
 
-
-.enquiry-button:hover {
-
-    background: #f4a261;
-
-    color: #222;
-
-    transform: translateY(-3px);
-
+.main-button:hover {
+    background: white;
+    transform: translateY(-4px);
 }
 
-
-/* ==========================================
-   ABOUT
-========================================== */
+/* ABOUT */
 
 .about {
-
     padding: 80px 7%;
-
     text-align: center;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #e8f5e9,
-            #e3f2fd
-        );
-
+    background: white;
 }
 
-
-.about-content {
-
-    max-width: 1000px;
-
-    margin: auto;
-
+.section-label {
+    color: #2e7d32;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
 
-
-.about h2 {
-
+.about h2,
+.plan h2,
+.contact h2 {
     color: #174d32;
-
-    font-size: 40px;
-
-    margin-bottom: 15px;
-
+    font-size: 38px;
+    margin-bottom: 20px;
 }
 
-
-.about-content > p {
-
-    color: #555;
-
-    font-size: 18px;
-
+.about-text {
     max-width: 750px;
-
     margin: auto;
-
+    color: #666;
+    font-size: 18px;
 }
-
-
-/* ==========================================
-   FEATURES
-========================================== */
 
 .features {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-
     margin-top: 45px;
-
 }
 
-
-.feature {
-
-    background: white;
-
-    padding: 30px;
-
+.feature-card {
+    background: #f1f8f2;
+    padding: 35px 20px;
     border-radius: 15px;
-
-    box-shadow:
-        0 5px 20px
-        rgba(0, 0, 0, 0.08);
-
+    transition: .3s;
 }
 
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #0002;
+}
 
-.feature span {
-
+.feature-card span {
     font-size: 45px;
-
 }
 
-
-.feature h3 {
-
+.feature-card h3 {
     color: #174d32;
-
-    margin: 10px 0;
-
+    margin: 12px 0;
 }
 
+/* PLAN YOUR TRIP */
 
-.feature p {
+.plan {
+    padding: 80px 20px;
+    background: #e8f5e9;
+}
 
+.plan-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #0002;
+}
+
+.plan-card h2 {
+    font-size: 32px;
+}
+
+.plan-card > p:not(.section-label) {
     color: #666;
-
+    margin-bottom: 25px;
 }
 
+label {
+    display: block;
+    font-weight: bold;
+    color: #174d32;
+    margin: 15px 0 8px;
+}
 
-/* ==========================================
-   CONTACT
-========================================== */
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 5px #2e7d3255;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* BUTTONS */
+
+.email-button,
+.contact-button {
+    width: 100%;
+    border: none;
+    background: #174d32;
+    color: white;
+    padding: 16px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: .3s;
+}
+
+.email-button:hover,
+.contact-button:hover {
+    background: #f4a261;
+    color: #222;
+}
+
+/* CONTACT */
 
 .contact {
-
     padding: 80px 20px;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #174d32,
-            #287a4c
-        );
-
-}
-
-
-.contact-box {
-
-    max-width: 600px;
-
-    margin: auto;
-
-    background: white;
-
-    padding: 45px;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 15px 40px
-        rgba(0, 0, 0, 0.25);
-
     text-align: center;
-
+    background: white;
 }
 
-
-.contact-box h2 {
-
+.email-address {
     color: #174d32;
-
-    font-size: 35px;
-
-    margin-bottom: 10px;
-
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 15px;
 }
-
-
-.contact-box > p {
-
-    color: #666;
-
-    margin-bottom: 25px;
-
-}
-
-
-/* ==========================================
-   CONTACT NUMBERS
-========================================== */
-
-.contact-numbers {
-
-    background: #e8f5e9;
-
-    border-left: 5px solid #2e7d32;
-
-    padding: 20px;
-
-    border-radius: 8px;
-
-    margin-bottom: 25px;
-
-}
-
-
-.contact-numbers p {
-
-    margin: 8px;
-
-    font-size: 18px;
-
-}
-
-
-.contact-numbers strong {
-
-    color: #174d32;
-
-}
-
-
-/* ==========================================
-   CONTACT BUTTON
-========================================== */
 
 .contact-button {
-
-    width: 100%;
-
-    padding: 15px;
-
-    border: none;
-
-    border-radius: 30px;
-
-    background: #174d32;
-
-    color: white;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-
+    max-width: 250px;
 }
 
-
-.contact-button:hover {
-
-    background: #f4a261;
-
-    color: #222;
-
-}
-
-
-/* ==========================================
-   FOOTER
-========================================== */
+/* FOOTER */
 
 footer {
-
     background: #092b1b;
-
     color: white;
-
     text-align: center;
-
-    padding: 25px;
-
-    font-size: 14px;
-
+    padding: 30px 15px;
 }
 
+footer h3 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
 
 footer p {
-
     margin: 5px;
-
 }
 
+/* MOBILE */
 
-/* ==========================================
-   TABLET
-========================================== */
-
-@media (max-width: 900px) {
-
-    .trip-card {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .trip-image {
-
-        min-height: 300px;
-
-    }
-
-
-    .features {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-}
-
-
-/* ==========================================
-   MOBILE
-========================================== */
-
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     .navbar {
-
         flex-direction: column;
-
         gap: 15px;
-
-        padding: 15px;
-
     }
 
-
-    .nav-links {
-
-        gap: 15px;
-
-        flex-wrap: wrap;
-
+    .navbar ul {
         justify-content: center;
-
+        flex-wrap: wrap;
+        gap: 15px;
     }
-
-
-    .hero {
-
-        min-height: 500px;
-
-    }
-
 
     .hero h1 {
-
-        font-size: 40px;
-
+        font-size: 43px;
     }
 
-
-    .hero p {
-
+    .hero-content > p:not(.tagline) {
         font-size: 17px;
-
     }
-
-
-    .trip {
-
-        padding: 60px 20px;
-
-    }
-
-
-    .trip-content {
-
-        padding: 30px 20px;
-
-    }
-
-
-    .trip-content h2 {
-
-        font-size: 30px;
-
-    }
-
-
-    .trip-details {
-
-        grid-template-columns: 1fr;
-
-    }
-
 
     .features {
-
         grid-template-columns: 1fr;
-
     }
 
-
-    .contact-box {
-
-        padding: 30px 20px;
-
+    .about h2,
+    .plan h2,
+    .contact h2 {
+        font-size: 29px;
     }
 
+    .plan-card {
+        padding: 25px 20px;
+    }
 }
-

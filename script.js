@@ -1,187 +1,43 @@
-/* ==========================================
-   TRAVEL WITH US
-   TRIP DATA
-========================================== */
+function sendEmail() {
 
+    // Get destination entered by visitor
+    const destination = document
+        .getElementById("destination")
+        .value.trim();
 
-/*
-================================================
-CHANGE YOUR TRIP INFORMATION HERE
-================================================
+    // Get optional message
+    const message = document
+        .getElementById("message")
+        .value.trim();
 
-You only need to change the values below.
-
-Do NOT change the variable names.
-Only change the information inside the quotes.
-*/
-
-
-/* ==========================================
-   DISPLAY TRIP DATA
-========================================== */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-
-        // Location in hero
-        document.getElementById(
-            "heroLocation"
-        ).textContent =
-            "Explore " +
-            tripData.location +
-            " 🌸";
-
-
-        // Location name
-        document.getElementById(
-            "locationName"
-        ).textContent =
-            tripData.location;
-
-
-        // Location description
-        document.getElementById(
-            "locationDescription"
-        ).textContent =
-            tripData.description;
-
-
-        // City
-        document.getElementById(
-            "location"
-        ).textContent =
-            tripData.city;
-
-
-        // Departure date
-        document.getElementById(
-            "departureDate"
-        ).textContent =
-            tripData.departureDate;
-
-
-        // Return date
-        document.getElementById(
-            "returnDate"
-        ).textContent =
-            tripData.returnDate;
-
-
-        // Phone number 1
-        document.getElementById(
-            "phone1"
-        ).textContent =
-            tripData.phone1;
-
-
-        // Phone number 2
-        document.getElementById(
-            "phone2"
-        ).textContent =
-            tripData.phone2;
-
-
-        // Contact phone 1
-        document.getElementById(
-            "contactPhone1"
-        ).textContent =
-            tripData.phone1;
-
-
-        // Contact phone 2
-        document.getElementById(
-            "contactPhone2"
-        ).textContent =
-            tripData.phone2;
-
-
-        // Footer
-        document.getElementById(
-            "footerTrip"
-        ).textContent =
-            "🌸 " +
-            tripData.location +
-            " | " +
-            tripData.city;
-
-
+    // Check destination
+    if (destination === "") {
+        alert("Please enter where you want to travel!");
+        return;
     }
-);
 
+    // Email recipient
+    const recipient = "shital.shelke2026@gmail.com";
 
-/* ==========================================
-   SEND ENQUIRY
-========================================== */
+    // Email subject
+    const subject = "Travel Enquiry - Travel With Us";
 
-function sendEnquiry() {
+    // Email body
+    const body =
+        "Hello Travel With Us,\n\n" +
+        "I would like to plan a trip.\n\n" +
+        "My preferred destination: " + destination + "\n\n" +
+        "My message: " + (message || "No additional message") +
+        "\n\nPlease share more details.\n\nThank you.";
 
+    // Gmail compose URL
+    const gmailURL =
+        "https://mail.google.com/mail/?view=cm&fs=1" +
+        "&to=" + encodeURIComponent(recipient) +
+        "&su=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
 
-    /*
-    ============================================
-    MESSAGE
-    ============================================
-    */
-
-
-    const message =
-
-        "Hello Travel With Us!\n\n" +
-
-        "I am interested in the following trip:\n\n" +
-
-        "Location: " +
-        tripData.location +
-        "\n" +
-
-        "Departure Date: " +
-        tripData.departureDate +
-        "\n" +
-
-        "Return Date: " +
-        tripData.returnDate +
-        "\n\n" +
-
-        "Please provide more information.";
-
-
-    /*
-    ============================================
-    SMS NUMBER
-    ============================================
-    
-    SMS will be opened for the first number.
-    */
-
-
-    const smsNumber =
-        tripData.phone1;
-
-
-    /*
-    ============================================
-    CREATE SMS LINK
-    ============================================
-    */
-
-
-    const smsURL =
-
-        "sms:" +
-        smsNumber +
-        "?body=" +
-        encodeURIComponent(message);
-
-
-    /*
-    ============================================
-    OPEN SMS
-    ============================================
-    */
-
-
-    window.location.href =
-        smsURL;
+    // Open Gmail in new tab
+    window.open(gmailURL, "_blank");
 
 }
